@@ -2,7 +2,7 @@
 
 A machine learning solution to predict customer churn and quantify revenue impact, enabling data-driven retention strategies for subscription-based businesses.
 
-## 🎯 Project Overview
+## 🎯 Project Overview 
 
 This project tackles customer churn prediction for a subscription service, identifying at-risk customers and estimating revenue impact. The model analyzes 5,000+ customer records to predict churn with **75% accuracy** and provides actionable insights for retention campaigns.
 
