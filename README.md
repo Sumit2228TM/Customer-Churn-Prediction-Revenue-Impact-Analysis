@@ -38,9 +38,7 @@ This project tackles customer churn prediction for a subscription service, ident
 - **Features**: 
   - **Demographics**: Age, gender, location
   - **Account Info**: Tenure, contract type, payment method
-  - **Usage**: Monthly charges, total charges, service usage
-  - **Engagement**: Support tickets, login frequency
-  - **Services**: Phone, internet, streaming subscriptions
+  - **Engagement**: Last_login, avg_watch
 
 **Target Variable**: Churn (1 = Churned, 0 = Retained)
 
@@ -102,12 +100,8 @@ from src.feature_engineering import create_features
 df_enhanced = create_features(df)
 
 # New features created:
-# - engagement_score
-# - usage_per_profile
-# - tenure_group
-# - payment_risk_score
-# - service_diversity
-# - monthly_spend_category
+# - tenure
+# - service_usage
 ```
 
 ### 3. Train Model
@@ -165,14 +159,9 @@ print(f"Expected ROI: ${impact['net_savings']:,.2f}")
 **After Feature Engineering**: 75% accuracy  
 **Improvement**: +6 percentage points
 
-### Top 6 Engineered Features
-1. **engagement_score**: Composite metric of customer activity
-2. **usage_per_profile**: Normalized service utilization
-3. **tenure_group**: Customer lifecycle stage
-4. **payment_risk_score**: Payment method & behavior risk
-5. **service_diversity**: Number of active services
-6. **monthly_spend_category**: Spending tier classification
-
+### Top Engineered Features
+1. **tenure**: Customer lifecycle stage
+2. **service_usage**: Time spent using service
 
 ---
 
